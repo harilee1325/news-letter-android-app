@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/Kotlin/compose-samples" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/Admin Workre" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/BSafe" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/BSafe-admin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/Blog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/DataBindingGettingStarted" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/Drive_jquery" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/InBev" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/LearnABC" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/LearnABC Backend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/MovieMan" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/android" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/inventory_management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/location_project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/location_tracker" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/my_blog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/others/Alphabet-App-Learning-Kids-ABC" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/others/FabFilter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/others/MotionPlayground" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/others/android-mvvm-architecture" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Projects/My Projects/others/mvvm-sample-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Web/inventory_management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Web/learn-fullstack-javascript" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Web/my_blog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Web/tik_tak_toe" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Web/web scraping" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WorkRe-User-Android" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/admin_workre" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/in-bev" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jitsi-meet" vcs="Git" />
+  </component>
+</project>

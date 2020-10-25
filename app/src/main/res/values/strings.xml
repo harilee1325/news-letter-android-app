@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">News Letter</string>
+    <string name="dummy_button">Enlighten me!</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="home_text">Select the types of news you would like to read!</string>
+    <string name="internation">International</string>
+</resources>
