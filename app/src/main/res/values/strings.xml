@@ -4,4 +4,7 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="home_text">Select the types of news you would like to read!</string>
     <string name="internation">International</string>
+    <string name="title_activity_all_news">AllNewsActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>

@@ -20,8 +20,8 @@ import androidx.transition.Fade;
 import androidx.transition.Transition;
 import androidx.transition.TransitionManager;
 
-import com.example.newsletter.R;
-import com.example.newsletter.home.news.AllNewsResult;
+import com.example.newsletter.R2;
+import com.example.newsletter.home.news.AllNewsActivity;
 import com.example.newsletter.room.HomeDb;
 import com.example.newsletter.utild.Config;
 import com.example.newsletter.utild.Utility;
@@ -38,15 +38,15 @@ public class FullscreenActivity extends AppCompatActivity {
 
 
     private static final String TAG = "Home";
-    @BindView(R.id.fullscreen_content)
+    @BindView(R2.id.fullscreen_content)
     TextView fullscreenContent;
-    @BindView(R.id.dummy_button)
+    @BindView(R2.id.dummy_button)
     Button dummyButton;
-    @BindView(R.id.fullscreen_content_controls)
+    @BindView(R2.id.fullscreen_content_controls)
     LinearLayout fullscreenContentControls;
-    @BindView(R.id.news_list)
+    @BindView(R2.id.news_list)
     RecyclerView newsList;
-    @BindView(R.id.container)
+    @BindView(R2.id.container)
     FrameLayout container;
     private List<HomeDb> tagsName = new ArrayList<>();
     private HomeViewModel homeViewModel;
@@ -55,7 +55,7 @@ public class FullscreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fullscreen);
+        setContentView(R2.layout.activity_fullscreen);
         ButterKnife.bind(this);
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
@@ -86,16 +86,17 @@ public class FullscreenActivity extends AppCompatActivity {
     private void toggleButton(boolean show) {
         Transition transition = new Fade();
         transition.setDuration(1000);
-        transition.addTarget(R.id.dummy_button);
+        transition.addTarget(R2.id.dummy_button);
 
         TransitionManager.beginDelayedTransition(container, transition);
         dummyButton.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 
-    @OnClick(R.id.dummy_button)
+    @OnClick(R2.id.dummy_button)
     public void onClick() {
 
-        startActivity(new Intent(this, AllNewsResult.class));
+        homeViewModel.updateTags(tagsName);
+        startActivity(new Intent(this, AllNewsActivity.class));
     }
 
     public static class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.ViewHolder> {
@@ -113,7 +114,7 @@ public class FullscreenActivity extends AppCompatActivity {
         @Override
         public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_tags_card, parent
+            View view = LayoutInflater.from(parent.getContext()).inflate(R2.layout.news_tags_card, parent
                     , false);
             return new ViewHolder(view);
         }
@@ -124,11 +125,11 @@ public class FullscreenActivity extends AppCompatActivity {
 
             holder.dummyButton.setText(tagsName.get(position).getTagName());
             if (tagsName.get(position).isChecked()) {
-                holder.dummyButton.setBackground(activity.getResources().getDrawable(R.drawable.curved_button_white));
-                holder.dummyButton.setTextColor(activity.getResources().getColor(R.color.colorPrimary));
+                holder.dummyButton.setBackground(activity.getResources().getDrawable(R2.drawable.curved_button_white));
+                holder.dummyButton.setTextColor(activity.getResources().getColor(R2.color.colorAccent));
             } else {
-                holder.dummyButton.setBackground(activity.getResources().getDrawable(R.drawable.curved_button_new));
-                holder.dummyButton.setTextColor(activity.getResources().getColor(R.color.colorAccent));
+                holder.dummyButton.setBackground(activity.getResources().getDrawable(R2.drawable.curved_button_new));
+                holder.dummyButton.setTextColor(activity.getResources().getColor(R2.color.colorAccent));
             }
             if (tagsName.get(position).isChecked()){
                 isAnySelected = true;
@@ -152,7 +153,7 @@ public class FullscreenActivity extends AppCompatActivity {
         }
 
         public static class ViewHolder extends RecyclerView.ViewHolder {
-            @BindView(R.id.dummy_button)
+            @BindView(R2.id.dummy_button)
             Button dummyButton;
 
             public ViewHolder(@NonNull View itemView) {

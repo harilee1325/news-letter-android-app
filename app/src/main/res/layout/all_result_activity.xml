@@ -3,43 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/previous_background">
+    android:background="@color/colorAccent">
 
-    <com.example.newsletter.home.news.ViewpagerHeader
-        android:id="@+id/motionLayout"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        app:layoutDescription="@xml/scene_15"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingClass">
+        android:layout_height="200dp"
+        android:theme="@style/NewAppTheme.AppBarOverlay"
+        tools:ignore="MissingConstraints">
 
-        <ImageView
-            android:id="@+id/trees1"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/city" />
+        <include layout="@layout/header"/>
 
-
-        <ImageView
-            android:id="@+id/car"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:src="@drawable/airplane" />
-
-    </com.example.newsletter.home.news.ViewpagerHeader>
-
+    </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabSelectedTextColor="@color/colorAccent"
-        app:tabTextColor="@color/text_light_color"
-        app:layout_constraintTop_toBottomOf="@+id/motionLayout"
+        app:tabSelectedTextColor="@color/text_light_color"
+        app:tabTextColor="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
         app:tabTextAppearance="@style/CustomTextAppearanceTab">
 
     </com.google.android.material.tabs.TabLayout>

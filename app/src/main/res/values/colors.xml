@@ -7,4 +7,5 @@
     <color name="previous_background">#0099cc</color>
     <color name="black_overlay">#000000</color>
     <color name="grey">#4a4a4a</color>
+    <color name ="selected_card">#ff91e4</color>
 </resources>

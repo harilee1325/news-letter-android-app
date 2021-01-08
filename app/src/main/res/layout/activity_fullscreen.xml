@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/previous_background"
+    android:background="@color/colorAccent"
     android:id="@+id/container"
-    app:layoutDescription="@xml/scene_15"
+    app:layoutDescription="@xml/scene_09"
     tools:context=".home.FullscreenActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
@@ -21,8 +21,8 @@
         android:padding="15dp"
         android:text="@string/home_text"
         android:textAlignment="viewStart"
-        android:textColor="@color/colorAccent"
-        android:textSize="25dp"
+        android:textColor="@color/text_light_color"
+        android:textSize="20dp"
         />
 
 

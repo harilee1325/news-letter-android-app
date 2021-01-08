@@ -14,6 +14,8 @@ import java.util.List;
 public class HomeViewModel extends AndroidViewModel implements HomeRepository.ITagsResponse {
 
     private MutableLiveData<List<HomeDb>> tagsResponse = new MutableLiveData<>();
+    private MutableLiveData<List<HomeDb>> selectedTagsResponse = new MutableLiveData<>();
+
     private final HomeRepository homeRepository;
     private Application mContext;
 
@@ -29,8 +31,21 @@ public class HomeViewModel extends AndroidViewModel implements HomeRepository.IT
         return tagsResponse;
     }
 
+    public LiveData<List<HomeDb>> getSelectedTags() {
+        return selectedTagsResponse;
+    }
+
     @Override
     public void getTagsData(List<HomeDb> tagsName) {
         tagsResponse.setValue(tagsName);
+    }
+
+    @Override
+    public void getSelectedTagsData(List<HomeDb> tagsSelected) {
+        selectedTagsResponse.setValue(tagsSelected);
+    }
+
+    public void updateTags(List<HomeDb> tagsName) {
+        homeRepository.updateTags(tagsName);
     }
 }

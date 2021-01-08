@@ -29,6 +29,33 @@ public class HomeRepository {
 
     }
 
+    public void updateTags(List<HomeDb> tagsName) {
+        new UpdateTags(tagsName).execute();
+    }
+
+
+    @SuppressLint("StaticFieldLeak")
+    private class UpdateTags extends AsyncTask<Void, Void, Void> {
+
+        private final List<HomeDb> tagsName;
+
+        public UpdateTags(List<HomeDb> tagsName) {
+        this.tagsName = tagsName;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            db.getHomeData().update(this.tagsName);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            tagsResponse.getTagsData(tagsName);
+        }
+    }
+
     @SuppressLint("StaticFieldLeak")
     private class AddNewTag extends AsyncTask<Void, Void, Void> {
 
@@ -90,8 +117,26 @@ public class HomeRepository {
         }
     }
 
+    @SuppressLint("StaticFieldLeak")
+    private class GetSelectedTags extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            tagsName.addAll(db.getHomeData().getSelectedTags());
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            tagsResponse.getSelectedTagsData(tagsName);
+        }
+    }
+
     public interface ITagsResponse {
         void getTagsData(List<HomeDb> tagsName);
+
+        void getSelectedTagsData(List<HomeDb> tagsSelected);
     }
 
 }
